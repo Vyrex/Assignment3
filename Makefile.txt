@@ -1,0 +1,10 @@
+all: Strings.c
+
+stringsProg: stringsProg.o
+	g++ stringsProg.o -o stringsProg
+
+stringsProg.o: $(all)
+	g++ $(all) -o stringsProg.o
+
+clean:
+	rm *.o stringsProg
